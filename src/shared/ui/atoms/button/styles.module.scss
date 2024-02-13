@@ -1,0 +1,55 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 24px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  line-height: 37px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+  transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+
+.primary {
+  height: 48px;
+  background: var(--blue);
+
+  &:hover {
+    background: var(--blue-hover);
+  }
+}
+
+.danger {
+  height: 48px;
+  background: var(--red);
+
+  &:hover {
+    background: var(--red-hover);
+  }
+}
+
+.transparent {
+  height: 48px;
+  background: transparent;
+}
+
+.ghost {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  color: var(--red);
+  padding: 0;
+  font-weight: bold;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+

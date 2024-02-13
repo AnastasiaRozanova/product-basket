@@ -1,0 +1,38 @@
+{
+  "extends": "react-app",
+  "plugins": ["eslint-plugin-import", "prettier"],
+  "rules": {
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "react{,-*,-*/*}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "**/*.{scss,css,sass}",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ]
+      }
+    ]
+  }
+}

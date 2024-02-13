@@ -1,0 +1,74 @@
+.modalWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalTitle {
+  text-transform: uppercase;
+}
+
+.formWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.formFieldsArrayWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.formFieldsArray {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.formFieldInput {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--dark);
+  background-color: var(--white);
+  background-clip: padding-box;
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.modalButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

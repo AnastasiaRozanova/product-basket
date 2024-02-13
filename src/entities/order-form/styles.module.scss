@@ -1,0 +1,22 @@
+.orderWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orderHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderTitle {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.orderFormWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
