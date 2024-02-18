@@ -33,8 +33,7 @@ export const AddProductsWithReactHookForm = () => {
 		return () => window.removeEventListener('storage', getFromStorage)
 	}, [])
 
-	const onSubmit = (data) => {
-		console.log('fire')
+	const onSubmit = (data: any) => {
 		localStorage.setItem('formValues', JSON.stringify(data))
 	}
 

@@ -6,5 +6,8 @@ export const App = () => (
 		<>
 			<OrderPage />
 			<Modals />
+			<div id="dropdown-root"></div>
+			<div id="tooltip-root"></div>
+			<div id="modal-root"></div>
 		</>
 )

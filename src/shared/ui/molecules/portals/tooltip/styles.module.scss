@@ -1,0 +1,38 @@
+.tooltipWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tooltipIcon {
+  position: relative;
+}
+
+.tooltip {
+  z-index: 1001;
+  width: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--dark);
+  border: 1px solid var(--light-grey);
+  position: absolute;
+}
+
+.tooltipContent {
+  width: 100%;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: rotate(135deg);
+    left: 0;
+    bottom: -16px;
+    background: var(--white);
+    border-top: 1px solid var(--light-grey);
+    border-right: 1px solid var(--light-grey);
+  }
+}

@@ -1,6 +1,6 @@
 import { PropsWithChildren, useCallback, useEffect, useRef } from 'react';
 import clsx from 'clsx';
-import { useOutsideClick } from '../../hooks';
+import { useClickOutside } from '../../hooks';
 import { Button } from '../../../ui/atoms';
 import { model } from '../model';
 import styles from './styles.module.scss';
@@ -44,7 +44,7 @@ export const Modal = ({
         return () => window.removeEventListener('keydown', closeOnEscape);
     }, [closeOnEscape]);
 
-    useOutsideClick(ref, () => model.closeActive());
+    useClickOutside({ ref, handler: () => model.closeActive()});
 
     return (
         <div className={styles.modalOverlay}>

@@ -68,12 +68,3 @@
         opacity: 1;
     }
 }
-
-@keyframes fade-in-mobile {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0%);
-    }
-}

@@ -1,17 +1,19 @@
-import { useEffect, MutableRefObject } from 'react';
+import { MutableRefObject, useLayoutEffect } from 'react';
 
-export const useOutsideClick = (
-		ref: MutableRefObject<HTMLElement | null> | MutableRefObject<HTMLElement | null>[],
-		handler: (event: MouseEvent | TouchEvent) => void,
-) => {
-	useEffect(() => {
-		const refsArray = Array.isArray(ref) ? ref : [ref];
+type ClickOutsideProps = {
+	ref: MutableRefObject<any> | MutableRefObject<any>[];
+	handler: (event: MouseEvent | TouchEvent) => void;
+	shouldListen?: boolean;
+};
 
-		const handleClick = (event: MouseEvent | TouchEvent) => {
+export const useClickOutside = ({ ref, handler, shouldListen = true }: ClickOutsideProps) => {
+	useLayoutEffect(() => {
+		const listener = (event: MouseEvent | TouchEvent) => {
+			const refsArray = Array.isArray(ref) ? ref : [ref];
+
 			if (
 					refsArray.some(
-							(itemRef) =>
-									!itemRef.current || itemRef.current.contains(event.target as Element),
+							(itemRef) => !itemRef.current || itemRef.current.contains(event.target),
 					)
 			) {
 				return;
@@ -20,10 +22,17 @@ export const useOutsideClick = (
 			handler(event);
 		};
 
-		document.addEventListener('click', handleClick, true);
+		if (shouldListen) {
+			document.addEventListener('touchstart', listener);
+			document.addEventListener('mousedown', listener);
+		} else {
+			document.removeEventListener('touchstart', listener);
+			document.removeEventListener('mousedown', listener);
+		}
 
 		return () => {
-			document.removeEventListener('click', handleClick, true);
+			document.removeEventListener('touchstart', listener);
+			document.removeEventListener('mousedown', listener);
 		};
-	}, [ref, handler]);
+	}, [handler, ref, shouldListen]);
 };

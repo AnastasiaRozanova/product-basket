@@ -34,3 +34,42 @@ export const Plus = withDefaultProps(({ size, fill, ...props }) => (
 			/>
 		</svg>
 ));
+
+export const ChevronDown = withDefaultProps(({ size, fill, ...props }) => (
+		<svg
+				width={size}
+				height={size}
+				viewBox="0 0 16 16"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				{...props}
+		>
+			<path
+					d="M3 5.5L8 10.5L13 5.5"
+					stroke={fill}
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+			/>
+		</svg>
+));
+
+export const InfoCircle = withDefaultProps(({ size, fill, ...props }) => (
+		<svg
+				width={size}
+				height={size}
+				viewBox="0 0 20 20"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				{...props}
+		>
+			<circle cx="10" cy="10" r="8.29492" stroke={fill} />
+			<path
+					d="M10 14.5116V14.5539M7.58936 7.90269C7.58936 6.54616 8.66866 5.44647 10 5.44647C11.3314 5.44647 12.4107 6.54616 12.4107 7.90269C12.4107 9.25922 11.3633 10.0304 10 10.3589C10 10.3589 10 10.6465 10 11.5508"
+					stroke={fill}
+					strokeWidth="1.7"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+			/>
+		</svg>
+));
