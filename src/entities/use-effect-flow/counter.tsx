@@ -1,6 +1,6 @@
 import { Button } from "@/shared/ui/atoms";
 import { useEffect, useState, useLayoutEffect } from "react";
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export const Counter = () => {
 	const [count1, setCount1] = useState(0);

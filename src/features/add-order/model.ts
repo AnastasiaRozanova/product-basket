@@ -1,7 +1,7 @@
-import { createEvent, createStore, sample } from 'effector';
-import { createGate } from 'effector-react';
+import { createEvent, createStore, sample } from "effector";
+import { createGate } from "effector-react";
 
-import { modalsModel, ModalsRegistry } from '@/shared/lib/modals';
+import { modalsModel, ModalsRegistry } from "@/shared/lib/modals";
 
 const startOrder = createEvent();
 
@@ -11,7 +11,7 @@ sample({
 	clock: startOrder,
 	source: gate.state,
 	fn: ({ modalName }) => ({
-		name: ModalsRegistry[modalName],
+		name: ModalsRegistry[modalName]
 	}),
 	target: modalsModel.addModal,
 });

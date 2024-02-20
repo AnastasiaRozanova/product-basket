@@ -1,5 +1,4 @@
 import { createEvent, createStore, sample } from "effector";
-
 import { Form } from "@/shared/types";
 
 const $order = createStore<Form[]>([]);

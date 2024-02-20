@@ -1,4 +1,4 @@
-import { MutableRefObject, useLayoutEffect } from 'react';
+import { MutableRefObject, useLayoutEffect } from "react";
 
 type ClickOutsideProps = {
 	ref: MutableRefObject<any> | MutableRefObject<any>[];

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/shared/ui/atoms";
 import { Modal, Dropdown } from "@/shared/ui/molecules";
-import { mockData } from './lib';
+import { mockData } from "./lib";
 
 export const Portals = () => {
 	const [isModalOpen, setModalOpen] = useState(false);

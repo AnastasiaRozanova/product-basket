@@ -1,13 +1,13 @@
-import { useUnit } from 'effector-react';
-import { useFieldArray, useForm } from 'effector-react-form';
+import { useUnit } from "effector-react";
+import { useFieldArray, useForm } from "effector-react-form";
 
-import { EMPTY_ORDER } from './lib';
-import { model } from './model';
-import styles from './styles.module.scss';
+import { EMPTY_ORDER } from "./lib";
+import { model } from "./model";
+import styles from "./styles.module.scss";
 
-import { OrderForm } from '@/entities/order-form';
-import { Modal, modalsModel } from '@/shared/lib/modals';
-import { Button, Input } from '@/shared/ui/atoms';
+import { OrderForm } from "@/entities/order-form";
+import { Modal, modalsModel } from "@/shared/lib/modals";
+import { Button, Input } from "@/shared/ui/atoms";
 
 export const AddProducts = () => {
 	const closeModal = useUnit(modalsModel.closeActive);

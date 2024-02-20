@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Counter } from "./counter";
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export const UseEffectFlow = () => {
 	const [showCounter, setShowCounter] = useState(false);

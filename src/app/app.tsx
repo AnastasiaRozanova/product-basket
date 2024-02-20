@@ -1,6 +1,6 @@
-import { OrderPage } from '@/widgets/order-page';
-import { Modals } from '@/shared/lib/modals';
-import './init';
+import { OrderPage } from "@/widgets/order-page";
+import { Modals } from "@/shared/lib/modals";
+import "./init";
 
 export const App = () => (
 		<>

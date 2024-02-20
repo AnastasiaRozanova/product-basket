@@ -9,6 +9,7 @@ export type Product = {
 export type BasketItem = {
   name: string;
   quantity: number;
+  id?: number;
 };
 
 export type Order = {
@@ -22,3 +23,5 @@ export type Form = {
 }
 
 export type Nullable<T> = T | null;
+
+export type FormKeys = 'name' | 'quantity';

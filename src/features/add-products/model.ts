@@ -1,11 +1,11 @@
-import {  sample } from 'effector';
-import { createForm, createFieldArray } from 'effector-react-form';
+import {  sample } from "effector";
+import { createForm, createFieldArray } from "effector-react-form";
 
-import { EMPTY_ORDER } from './lib';
+import { EMPTY_ORDER } from "./lib";
 
-import { userOrderListModel } from '@/entities/user-order-list';
-import { Form } from '@/shared/types';
-import { modalsModel } from '@/shared/lib/modals';
+import { userOrderListModel } from "@/entities/user-order-list";
+import { Form } from "@/shared/types";
+import { modalsModel } from "@/shared/lib/modals";
 
 const form = createForm<Form>({
 	initialValues: {

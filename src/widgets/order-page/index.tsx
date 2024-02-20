@@ -13,6 +13,7 @@ export const OrderPage = () => (
 			<div className={styles.buttons}>
 				<AddOrder textContent="Начать заказ" modalName="AddProducts" />
 				<AddOrder textContent="Начать заказ с react-hook-form" modalName="AddProductsWithReactHookForm" />
+				<AddOrder textContent="Начать заказ с effector-forms" modalName="AddProductsWithEffectorForms" />
 			</div>
 
 			<UserOrderList />

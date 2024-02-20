@@ -1,13 +1,12 @@
-import { useId, useEffect } from 'react';
+import { useId, useEffect } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 
-import { EMPTY_ORDER } from '../add-products/lib';
-import { FormKeys, formLabelsMapping } from './lib';
 import styles from './styles.module.scss';
 
 import { Button } from "@/shared/ui/atoms";
 import { Modal, modalsModel } from "@/shared/lib/modals";
-import { Form } from '@/shared/types';
+import { Form, FormKeys } from '@/shared/types';
+import { EMPTY_ORDER, formLabelsMapping } from '@/shared/lib/constants';
 
 export const AddProductsWithReactHookForm = () => {
 	const { register, control, handleSubmit } = useForm<Form>({
@@ -56,7 +55,10 @@ export const AddProductsWithReactHookForm = () => {
 										<li key={field.id} className={styles.formFields}>
 											{formFields.map(elem => (
 													<div key={elem + fieldIndex}>
-														<label htmlFor={String(id) + fieldIndex}>{formLabelsMapping[elem as FormKeys]}</label>
+														<label htmlFor={String(id) + fieldIndex}>
+															{formLabelsMapping[elem as FormKeys]}
+														</label>
+
 														<input
 																id={String(id) + fieldIndex}
 																className={styles.formFieldInput}

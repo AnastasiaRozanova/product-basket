@@ -1,2 +1,2 @@
-export { UserOrderList } from './ui';
-export { model as userOrderListModel } from './model';
+export { UserOrderList } from "./ui";
+export { model as userOrderListModel } from "./model";

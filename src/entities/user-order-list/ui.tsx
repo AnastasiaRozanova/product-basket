@@ -1,8 +1,8 @@
-import { useUnit } from 'effector-react';
+import { useUnit } from "effector-react";
 
-import { UserOrderCard } from '../user-order-card';
-import { model } from './model';
-import styles from './styles.module.scss';
+import { UserOrderCard } from "../user-order-card";
+import { model } from "./model";
+import styles from "./styles.module.scss";
 
 
 export const UserOrderList = () => {

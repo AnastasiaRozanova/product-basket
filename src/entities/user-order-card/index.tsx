@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 import { Form } from "@/shared/types";
 import { Button } from "@/shared/ui/atoms";
